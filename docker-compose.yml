@@ -1,0 +1,19 @@
+version: 4.30.0
+services:
+  mysql:
+   image: mysql:latest
+   restart: always
+   container_name: mysql
+   environment: 
+    MYSQL_ROOT_PASSWORD: root
+   ports:
+    - 3306:3306
+  dl:
+   build: .
+   restart: always
+   ports:
+    - 8585:8585
+   depends_on: 
+    - mysql
+    
+      

@@ -8,7 +8,7 @@ WORKDIR /docker
 ADD target/DockerLogin-0.0.1-SNAPSHOT.jar app.jar
 
 #Make port 80 available to the world outside this container
-EXPOSE 80
+EXPOSE 8585
 
 #Run the application
 ENTRYPOINT [ "java", "-jar", "/docker/app.jar"]
